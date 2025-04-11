@@ -2,6 +2,17 @@
 Using NIST API (https://services.nvd.nist.gov/rest/json/cves/2.0?cveId={cve_id}) to adjust CVSS scoring for list of CVES. e.g. Nessus scan results, pentest reports with multiple CVEs but you are adjusting the impact based on its Attack Vector.
 
 
+how to use
+1. Need Python and install python cvss library
+ `pip install cvss`
+
+2. prepare a list of CVES e.g. `cves.txt`
+
+3. run `python cvss_adjuster.py cves.txt`
+
+![image](https://github.com/user-attachments/assets/ce6e2f6c-61df-4db0-ba03-a8a1a93899c0)
+
+
 # How it works
 
 1. Adjust Attack Vector field in script e.g. Changing it to "A" will reduce all CVEs vectors provided by (CVSS) "A".
